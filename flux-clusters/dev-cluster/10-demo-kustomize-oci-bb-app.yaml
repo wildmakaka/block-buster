@@ -2,13 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: 8-demo-kustomize-git-bb-app
+  name: 10-demo-kustomize-oci-bb-app
   namespace: flux-system
 spec:
   interval: 10s
-  path: ./manifests
+  path: ./
   prune: true
   sourceRef:
-    kind: GitRepository
-    name: 8-demo-source-git-bb-app
-  targetNamespace: 8-demo
+    kind: OCIRepository
+    name: 10-demo-source-oci-bb-app
+  targetNamespace: 10-demo
